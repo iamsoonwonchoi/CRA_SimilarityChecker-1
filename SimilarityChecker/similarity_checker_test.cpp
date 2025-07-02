@@ -7,6 +7,12 @@ TEST(SimilarityChecker, SameLength)
 	EXPECT_EQ(60, simChecker.checkSimilarity("ABCDE", "ABCDE"));
 }
 
+TEST(SimilarityChecker, DifLength)
+{
+	SimilarityChecker simChecker;
+	EXPECT_EQ(0, simChecker.checkSimilarity("A", "ABCDE"));
+}
+
 int main()
 {
 	testing::InitGoogleMock();

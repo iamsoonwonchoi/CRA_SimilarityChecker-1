@@ -8,6 +8,7 @@ public:
 	int getLengthSimilarity(int len1, int len2)
 	{
 		if (len1 == len2) return 60;
+		return 0;
 	}
 };
 
@@ -18,7 +19,7 @@ public:
 	{
 		int score_length = lenChecker.getLengthSimilarity(input1.length(), input2.length());
 
-		return 60;
+		return score_length;
 	}
 private:
 	LengthChecker lenChecker;
