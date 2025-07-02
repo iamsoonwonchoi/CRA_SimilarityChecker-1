@@ -3,8 +3,8 @@
 
 TEST(SimilarityChecker, SameLength)
 {
-	SimilarityChecker simchecker;
-	EXPECT_EQ(60, simchecker.checkSimilarity("ABCDE", "ABCDE"));
+	SimilarityChecker simChecker;
+	EXPECT_EQ(60, simChecker.checkSimilarity("ABCDE", "ABCDE"));
 }
 
 int main()
