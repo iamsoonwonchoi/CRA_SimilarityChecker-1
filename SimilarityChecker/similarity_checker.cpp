@@ -17,10 +17,11 @@ public:
 
 private:
 	static const int MAX_SCORE_LENGTH = 60;
+	static const int MIN_SCORE_LENGTH = 0;
 
 	int getScoreInDifLength(int bigger, int smaller)
 	{
-		if (bigger >= smaller * 2) return 0;
+		if (bigger >= smaller * 2) return MIN_SCORE_LENGTH;
 
 		int gap = bigger - smaller;
 		return (1 - static_cast<double>(gap) / smaller) * MAX_SCORE_LENGTH;
